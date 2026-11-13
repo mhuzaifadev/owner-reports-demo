@@ -1,0 +1,17 @@
+# /etc/systemd/system/owner-reports.service
+#   systemctl daemon-reload && systemctl enable --now owner-reports
+[Unit]
+Description=Owner reports demo API
+After=network.target
+
+[Service]
+User=www-data
+WorkingDirectory=/opt/owner-reports/backend
+EnvironmentFile=/opt/owner-reports/backend/.env
+Environment=DATA_PATH=/var/www/owner-reports/data/portfolio.json
+ExecStart=/opt/owner-reports/venv/bin/uvicorn main:app --host 127.0.0.1 --port 8010 --workers 1
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

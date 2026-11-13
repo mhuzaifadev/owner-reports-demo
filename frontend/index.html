@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Owner reports</title>
+  <meta name="description" content="Portfolio dashboard and AI-drafted owner updates for multifamily property managers. Demo data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Backdrop: Front Range at first light. The glass refracts this. -->
+  <div class="backdrop" aria-hidden="true">
+    <svg class="ridge" viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#b9cadc"/>
+          <stop offset="1" stop-color="#d9e3ee"/>
+        </linearGradient>
+        <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#8ea6bf"/>
+          <stop offset="1" stop-color="#c6d4e2"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#far)" d="M0 250 L90 214 L160 232 L250 170 L330 205 L420 150 L500 190 L590 128 L660 168 L740 120 L820 176 L905 140 L980 184 L1060 132 L1150 180 L1230 150 L1320 196 L1440 166 L1440 420 L0 420Z"/>
+      <path fill="url(#near)" d="M0 312 L120 262 L210 290 L300 236 L380 276 L470 222 L560 268 L640 240 L720 286 L820 230 L900 272 L1000 246 L1090 292 L1190 248 L1290 286 L1440 252 L1440 420 L0 420Z"/>
+    </svg>
+  </div>
+
+  <!-- Compact bar: appears once the large title scrolls away (One UI collapsing header) -->
+  <header class="compact-bar glass glass--bar" id="compactBar" aria-hidden="true">
+    <span class="compact-title">Owner reports</span>
+    <span class="compact-month" data-bind="monthLabel"></span>
+  </header>
+
+  <main class="page">
+    <section class="title-area" id="titleArea">
+      <div class="title-row">
+        <div>
+          <h1 class="large-title">Owner reports</h1>
+          <p class="subtitle" data-bind="portfolioSummary">Loading portfolio…</p>
+        </div>
+        <div class="title-controls">
+          <label class="pill-select">
+            <span class="sr-only">Report month</span>
+            <select id="monthSelect" aria-label="Report month"></select>
+          </label>
+        </div>
+      </div>
+      <p class="demo-note" role="note">
+        <svg class="icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5M10 6.2v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Demo data. Every property, owner and figure here is made up.
+      </p>
+    </section>
+
+    <!-- Portfolio totals: one glass slab, four figures -->
+    <section class="glass glass--slab kpis" aria-label="Portfolio totals" id="kpis"></section>
+
+    <div class="workspace">
+      <!-- Property list (One UI grouped list) -->
+      <section class="glass glass--panel properties" aria-labelledby="propertiesHeading">
+        <div class="panel-head">
+          <h2 id="propertiesHeading">Properties</h2>
+          <p class="panel-hint" data-bind="flagSummary"></p>
+        </div>
+        <div class="table-wrap">
+          <table class="prop-table">
+            <thead>
+              <tr>
+                <th scope="col">Property</th>
+                <th scope="col" class="num">Occupancy</th>
+                <th scope="col" class="num">Delinquent</th>
+                <th scope="col" class="num">Avg turn</th>
+                <th scope="col" class="num">NOI</th>
+              </tr>
+            </thead>
+            <tbody id="propertyRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Selected property -->
+      <section class="glass glass--panel detail" aria-live="polite" aria-labelledby="detailName">
+        <div class="detail-head">
+          <div>
+            <h2 id="detailName">Select a property</h2>
+            <p class="panel-hint" data-bind="detailMeta"></p>
+          </div>
+        </div>
+
+        <ul class="flag-list" id="flagList" aria-label="Flags this month"></ul>
+
+        <figure class="chart-block">
+          <figcaption>
+            <span class="chart-title">Occupancy, last six months</span>
+          </figcaption>
+          <div class="chart" id="occupancyChart"></div>
+        </figure>
+
+        <figure class="chart-block">
+          <figcaption>
+            <span class="chart-title">Unpaid rent by how late it is</span>
+            <span class="chart-sub" data-bind="agingTotal"></span>
+          </figcaption>
+          <div class="chart" id="agingChart"></div>
+        </figure>
+
+        <dl class="facts" id="facts"></dl>
+
+        <button class="btn btn--primary btn--wide desktop-only" id="draftBtn" type="button">
+          Draft owner update
+        </button>
+      </section>
+    </div>
+
+    <!-- Approved updates -->
+    <section class="glass glass--panel log" aria-labelledby="logHeading">
+      <div class="panel-head">
+        <h2 id="logHeading">Approved updates</h2>
+        <p class="panel-hint">Nothing goes to an owner until someone on your team approves it.</p>
+      </div>
+      <ol class="log-list" id="logList">
+        <li class="log-empty">No updates approved yet. Pick a property and draft one.</li>
+      </ol>
+    </section>
+
+    <footer class="foot">
+      <p>Built by Huzaifa. Runs on AppFolio-style report exports or the AppFolio API.</p>
+    </footer>
+  </main>
+
+  <!-- Thumb-reach action on phones (One UI) -->
+  <div class="fab-dock mobile-only">
+    <button class="btn btn--primary btn--fab glass--tint" id="draftBtnMobile" type="button">Draft owner update</button>
+  </div>
+
+  <!-- Draft sheet -->
+  <div class="scrim" id="scrim" hidden></div>
+  <section class="sheet glass glass--sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <header class="sheet-head">
+      <div>
+        <h2 id="sheetTitle">Owner update</h2>
+        <p class="panel-hint" data-bind="sheetMeta"></p>
+      </div>
+      <button class="icon-btn" id="sheetClose" type="button" aria-label="Close">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+
+    <div class="sheet-body">
+      <div class="draft-state" id="draftLoading">
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Drafting from this month’s figures…</span>
+      </div>
+
+      <div id="draftReady" hidden>
+        <div class="check-row" id="checkRow"></div>
+        <label class="field">
+          <span class="field-label">Message to <span data-bind="ownerName"></span></span>
+          <textarea id="draftText" rows="11" spellcheck="true"></textarea>
+        </label>
+        <p class="field-help" id="draftSource"></p>
+      </div>
+    </div>
+
+    <footer class="sheet-foot">
+      <button class="btn btn--quiet" id="regenBtn" type="button">Redraft</button>
+      <button class="btn btn--primary" id="approveBtn" type="button" disabled>Approve</button>
+    </footer>
+  </section>
+
+  <div class="toast glass glass--bar" id="toast" role="status" aria-live="polite" hidden></div>
+  <div class="tooltip" id="tooltip" role="presentation" hidden></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

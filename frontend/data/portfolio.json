@@ -1,0 +1,481 @@
+{
+  "portfolio": {
+    "name": "Front Range demo portfolio",
+    "report_month": "2026-10",
+    "months": [
+      "2026-05",
+      "2026-06",
+      "2026-07",
+      "2026-08",
+      "2026-09",
+      "2026-10"
+    ],
+    "is_demo": true
+  },
+  "properties": [
+    {
+      "id": "aspen-ridge",
+      "name": "Aspen Ridge Flats",
+      "city": "Denver",
+      "type": "Multifamily",
+      "units": 48,
+      "avg_rent": 1850,
+      "owner": {
+        "name": "Meridian Holdings LLC",
+        "contact": "Dana Price"
+      },
+      "monthly": [
+        {
+          "month": "2026-05",
+          "occupied": 45,
+          "rent_billed": 83250,
+          "collected": 81751.5,
+          "delinquent": 1498.5,
+          "other_income": 2350.84,
+          "expenses": 37077.77,
+          "noi": 47024.57,
+          "turns_completed": 3,
+          "avg_turn_days": 8,
+          "work_orders_opened": 4,
+          "work_orders_closed": 5
+        },
+        {
+          "month": "2026-06",
+          "occupied": 46,
+          "rent_billed": 85100,
+          "collected": 83738.4,
+          "delinquent": 1361.6,
+          "other_income": 2826.4,
+          "expenses": 36825.94,
+          "noi": 49738.87,
+          "turns_completed": 3,
+          "avg_turn_days": 7,
+          "work_orders_opened": 4,
+          "work_orders_closed": 12
+        },
+        {
+          "month": "2026-07",
+          "occupied": 46,
+          "rent_billed": 85100,
+          "collected": 83483.1,
+          "delinquent": 1616.9,
+          "other_income": 2310.21,
+          "expenses": 36789.61,
+          "noi": 49003.7,
+          "turns_completed": 2,
+          "avg_turn_days": 8,
+          "work_orders_opened": 5,
+          "work_orders_closed": 7
+        },
+        {
+          "month": "2026-08",
+          "occupied": 47,
+          "rent_billed": 86950,
+          "collected": 85645.75,
+          "delinquent": 1304.25,
+          "other_income": 2252.62,
+          "expenses": 38292.87,
+          "noi": 49605.51,
+          "turns_completed": 3,
+          "avg_turn_days": 7,
+          "work_orders_opened": 5,
+          "work_orders_closed": 7
+        },
+        {
+          "month": "2026-09",
+          "occupied": 47,
+          "rent_billed": 86950,
+          "collected": 85471.85,
+          "delinquent": 1478.15,
+          "other_income": 2722.08,
+          "expenses": 38996.51,
+          "noi": 49197.42,
+          "turns_completed": 1,
+          "avg_turn_days": 8,
+          "work_orders_opened": 13,
+          "work_orders_closed": 13
+        },
+        {
+          "month": "2026-10",
+          "occupied": 47,
+          "rent_billed": 86950,
+          "collected": 85732.7,
+          "delinquent": 1217.3,
+          "other_income": 2518.66,
+          "expenses": 40742.57,
+          "noi": 47508.79,
+          "turns_completed": 1,
+          "avg_turn_days": 7,
+          "work_orders_opened": 12,
+          "work_orders_closed": 6
+        }
+      ],
+      "aging": [
+        {
+          "bucket": "0\u201330 days",
+          "amount": 876.46
+        },
+        {
+          "bucket": "31\u201360 days",
+          "amount": 219.11
+        },
+        {
+          "bucket": "61\u201390 days",
+          "amount": 85.21
+        },
+        {
+          "bucket": "90+ days",
+          "amount": 36.52
+        }
+      ]
+    },
+    {
+      "id": "juniper-court",
+      "name": "Juniper Court",
+      "city": "Lakewood",
+      "type": "Multifamily",
+      "units": 36,
+      "avg_rent": 1625,
+      "owner": {
+        "name": "Clearwater Partners",
+        "contact": "Marcus Lee"
+      },
+      "monthly": [
+        {
+          "month": "2026-05",
+          "occupied": 35,
+          "rent_billed": 56875,
+          "collected": 55680.62,
+          "delinquent": 1194.38,
+          "other_income": 1586.59,
+          "expenses": 24406.95,
+          "noi": 32860.27,
+          "turns_completed": 1,
+          "avg_turn_days": 9,
+          "work_orders_opened": 13,
+          "work_orders_closed": 8
+        },
+        {
+          "month": "2026-06",
+          "occupied": 35,
+          "rent_billed": 56875,
+          "collected": 55794.38,
+          "delinquent": 1080.62,
+          "other_income": 1740.52,
+          "expenses": 25979.86,
+          "noi": 31555.04,
+          "turns_completed": 1,
+          "avg_turn_days": 8,
+          "work_orders_opened": 13,
+          "work_orders_closed": 13
+        },
+        {
+          "month": "2026-07",
+          "occupied": 34,
+          "rent_billed": 55250,
+          "collected": 54034.5,
+          "delinquent": 1215.5,
+          "other_income": 1734.25,
+          "expenses": 25074.26,
+          "noi": 30694.49,
+          "turns_completed": 3,
+          "avg_turn_days": 9,
+          "work_orders_opened": 5,
+          "work_orders_closed": 13
+        },
+        {
+          "month": "2026-08",
+          "occupied": 35,
+          "rent_billed": 56875,
+          "collected": 55737.5,
+          "delinquent": 1137.5,
+          "other_income": 1455.77,
+          "expenses": 24587.43,
+          "noi": 32605.84,
+          "turns_completed": 3,
+          "avg_turn_days": 10,
+          "work_orders_opened": 12,
+          "work_orders_closed": 10
+        },
+        {
+          "month": "2026-09",
+          "occupied": 34,
+          "rent_billed": 55250,
+          "collected": 53979.25,
+          "delinquent": 1270.75,
+          "other_income": 1810.67,
+          "expenses": 25346.89,
+          "noi": 30443.03,
+          "turns_completed": 2,
+          "avg_turn_days": 9,
+          "work_orders_opened": 9,
+          "work_orders_closed": 8
+        },
+        {
+          "month": "2026-10",
+          "occupied": 32,
+          "rent_billed": 52000,
+          "collected": 50700.0,
+          "delinquent": 1300.0,
+          "other_income": 1429.18,
+          "expenses": 24510.82,
+          "noi": 27618.36,
+          "turns_completed": 1,
+          "avg_turn_days": 11,
+          "work_orders_opened": 5,
+          "work_orders_closed": 13
+        }
+      ],
+      "aging": [
+        {
+          "bucket": "0\u201330 days",
+          "amount": 936.0
+        },
+        {
+          "bucket": "31\u201360 days",
+          "amount": 234.0
+        },
+        {
+          "bucket": "61\u201390 days",
+          "amount": 91.0
+        },
+        {
+          "bucket": "90+ days",
+          "amount": 39.0
+        }
+      ]
+    },
+    {
+      "id": "bluebird-terrace",
+      "name": "Bluebird Terrace",
+      "city": "Colorado Springs",
+      "type": "Multifamily",
+      "units": 24,
+      "avg_rent": 1390,
+      "owner": {
+        "name": "Pikeview Residential",
+        "contact": "Elena Ruiz"
+      },
+      "monthly": [
+        {
+          "month": "2026-05",
+          "occupied": 23,
+          "rent_billed": 31970,
+          "collected": 31394.54,
+          "delinquent": 575.46,
+          "other_income": 895.24,
+          "expenses": 14503.45,
+          "noi": 17786.33,
+          "turns_completed": 2,
+          "avg_turn_days": 7,
+          "work_orders_opened": 11,
+          "work_orders_closed": 8
+        },
+        {
+          "month": "2026-06",
+          "occupied": 23,
+          "rent_billed": 31970,
+          "collected": 31298.63,
+          "delinquent": 671.37,
+          "other_income": 993.93,
+          "expenses": 13799.7,
+          "noi": 18492.87,
+          "turns_completed": 3,
+          "avg_turn_days": 8,
+          "work_orders_opened": 10,
+          "work_orders_closed": 6
+        },
+        {
+          "month": "2026-07",
+          "occupied": 23,
+          "rent_billed": 31970,
+          "collected": 31042.87,
+          "delinquent": 927.13,
+          "other_income": 1041.31,
+          "expenses": 13931.11,
+          "noi": 18153.07,
+          "turns_completed": 2,
+          "avg_turn_days": 7,
+          "work_orders_opened": 10,
+          "work_orders_closed": 4
+        },
+        {
+          "month": "2026-08",
+          "occupied": 22,
+          "rent_billed": 30580,
+          "collected": 29417.96,
+          "delinquent": 1162.04,
+          "other_income": 1058.69,
+          "expenses": 13807.07,
+          "noi": 16669.57,
+          "turns_completed": 3,
+          "avg_turn_days": 9,
+          "work_orders_opened": 13,
+          "work_orders_closed": 9
+        },
+        {
+          "month": "2026-09",
+          "occupied": 23,
+          "rent_billed": 31970,
+          "collected": 30339.53,
+          "delinquent": 1630.47,
+          "other_income": 907.99,
+          "expenses": 14261.7,
+          "noi": 16985.82,
+          "turns_completed": 2,
+          "avg_turn_days": 8,
+          "work_orders_opened": 13,
+          "work_orders_closed": 11
+        },
+        {
+          "month": "2026-10",
+          "occupied": 23,
+          "rent_billed": 31970,
+          "collected": 29828.01,
+          "delinquent": 2141.99,
+          "other_income": 821.23,
+          "expenses": 13833.72,
+          "noi": 16815.53,
+          "turns_completed": 2,
+          "avg_turn_days": 8,
+          "work_orders_opened": 11,
+          "work_orders_closed": 5
+        }
+      ],
+      "aging": [
+        {
+          "bucket": "0\u201330 days",
+          "amount": 813.96
+        },
+        {
+          "bucket": "31\u201360 days",
+          "amount": 664.02
+        },
+        {
+          "bucket": "61\u201390 days",
+          "amount": 406.98
+        },
+        {
+          "bucket": "90+ days",
+          "amount": 257.04
+        }
+      ]
+    },
+    {
+      "id": "cottonwood-homes",
+      "name": "Cottonwood Homes",
+      "city": "Aurora",
+      "type": "Build-to-rent",
+      "units": 42,
+      "avg_rent": 2275,
+      "owner": {
+        "name": "Eastline BTR Fund I",
+        "contact": "Priya Nair"
+      },
+      "monthly": [
+        {
+          "month": "2026-05",
+          "occupied": 38,
+          "rent_billed": 86450,
+          "collected": 85412.6,
+          "delinquent": 1037.4,
+          "other_income": 2213.7,
+          "expenses": 42526.88,
+          "noi": 45099.42,
+          "turns_completed": 3,
+          "avg_turn_days": 7,
+          "work_orders_opened": 13,
+          "work_orders_closed": 11
+        },
+        {
+          "month": "2026-06",
+          "occupied": 39,
+          "rent_billed": 88725,
+          "collected": 87482.85,
+          "delinquent": 1242.15,
+          "other_income": 2470.63,
+          "expenses": 41018.62,
+          "noi": 48934.86,
+          "turns_completed": 3,
+          "avg_turn_days": 8,
+          "work_orders_opened": 9,
+          "work_orders_closed": 4
+        },
+        {
+          "month": "2026-07",
+          "occupied": 40,
+          "rent_billed": 91000,
+          "collected": 89999.0,
+          "delinquent": 1001.0,
+          "other_income": 3130.99,
+          "expenses": 40873.73,
+          "noi": 52256.26,
+          "turns_completed": 3,
+          "avg_turn_days": 9,
+          "work_orders_opened": 5,
+          "work_orders_closed": 11
+        },
+        {
+          "month": "2026-08",
+          "occupied": 41,
+          "rent_billed": 93275,
+          "collected": 92062.43,
+          "delinquent": 1212.58,
+          "other_income": 2386.86,
+          "expenses": 42845.73,
+          "noi": 51603.56,
+          "turns_completed": 1,
+          "avg_turn_days": 11,
+          "work_orders_opened": 7,
+          "work_orders_closed": 10
+        },
+        {
+          "month": "2026-09",
+          "occupied": 41,
+          "rent_billed": 93275,
+          "collected": 92155.7,
+          "delinquent": 1119.3,
+          "other_income": 2696.53,
+          "expenses": 43338.72,
+          "noi": 51513.51,
+          "turns_completed": 1,
+          "avg_turn_days": 13,
+          "work_orders_opened": 6,
+          "work_orders_closed": 11
+        },
+        {
+          "month": "2026-10",
+          "occupied": 42,
+          "rent_billed": 95550,
+          "collected": 94116.75,
+          "delinquent": 1433.25,
+          "other_income": 2772.52,
+          "expenses": 40502.88,
+          "noi": 56386.39,
+          "turns_completed": 1,
+          "avg_turn_days": 15,
+          "work_orders_opened": 10,
+          "work_orders_closed": 12
+        }
+      ],
+      "aging": [
+        {
+          "bucket": "0\u201330 days",
+          "amount": 1031.94
+        },
+        {
+          "bucket": "31\u201360 days",
+          "amount": 257.99
+        },
+        {
+          "bucket": "61\u201390 days",
+          "amount": 100.33
+        },
+        {
+          "bucket": "90+ days",
+          "amount": 43.0
+        }
+      ]
+    }
+  ]
+}
